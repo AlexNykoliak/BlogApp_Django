@@ -17,15 +17,15 @@ rel="stylesheet">
   <div>
   <header>
     <div class="nav-left">
-    <h1><a href="{% url 'home' %}">Alex blog (Django)</a></h1>
+    <h2><a href="{% url 'home' %}">News about Europe</a></h2>
     </div>
     <div class="nav navbar-nav ml-auto">
         <a href="{% url 'post_new' %}"> + New Blog Post</a>
     </div>
 </header>
       {% if user.is_authenticated %}
-        <p>Hi {{ user.username }}!</p>
-        <p><a href="{% url 'logout' %}">Log out</a></p>
+        <p align="right">Hi {{ user.username }}!</p>
+        <p align="right"><a href="{% url 'logout' %}">Log out</a></p>
       {% else %}
         <p>You are not logged in.</p>
         <a href="{% url 'login' %}">Log in</a>
